@@ -1,0 +1,19 @@
+<form id="myForm">
+  Name: <input type="text" id="name"><br>
+  Email: <input type="email" id="email"><br>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent form submission
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+
+    if (name === "" || email === "") {
+        alert("Please fill all fields!");
+    } else {
+        alert("Form is valid. You can send data to PHP now.");
+    }
+});
+</script>
